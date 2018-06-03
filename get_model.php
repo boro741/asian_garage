@@ -9,7 +9,7 @@
   $table_name= (explode(" ",$str));
 
 
-  $pdo=new PDO("mysql:host=localhost;port=3306;dbname=$db_name[0]",'root','');
+  $pdo=new PDO("mysql:host=localhost;port=3306;dbname=garage",'root','');
   $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
   $stmt=$pdo->query("SELECT * FROM ".$table_name[1]);

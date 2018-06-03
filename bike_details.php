@@ -50,10 +50,9 @@
    ?>
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
-
    <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+ 
 <style>
   .container{
     align: center;
@@ -113,7 +112,7 @@ var t_name;
 <body>
 
 <div class="container">
-    <form method="post">
+    <form method="post" >
 
         <div class="row">
 
@@ -172,7 +171,7 @@ var t_name;
                 <p style="color:red"><?php if(isset($errors['Rnumber'])) echo $errors['Rnumber']; ?></p>
             </div>
         </div>
-
+    
     <div class="row">
         <div class="col">
             <input type="submit" class="btn btn-primary" value="Proceed">
@@ -180,5 +179,6 @@ var t_name;
     </div>
     </form>
 </div>
+
 </body>
 </html>
