@@ -10,16 +10,8 @@
 <body>
 
 <div class="row">
-            <h3>Address: </h3>
+            <h3>Get my pick up location:</h3>
       </div>
-    <div class="row" style="margin-left: 10%">
-        <input type="text" placeholder="" id="source" onchange="addrCoordinate()" >
-        <!--<input type="button" value="Get Distance" onclick="getDistance()">-->
-    </div>
-
-    <div class="row">
-        <h4> (OR)</h4>
-    </div>
 
     <div class="row">
     <button style="margin-bottom: 5px"onclick="getMyLocation()" style="font-size:18px">My Location<i class="material-icons">location_on</i></button>
@@ -108,7 +100,7 @@ var xhttp = new XMLHttpRequest();
 
 xhttp.onreadystatechange = function() {
 if (this.readyState == 4 && this.status == 200) {
-    console.log(this.responseText);
+    console.log(this.responseText.results[0].geometry.location.lat);
 }
 };
 xhttp.open("GET", `https://maps.googleapis.com/maps/api/geocode/json?address=${encodedAddr}`, true);
